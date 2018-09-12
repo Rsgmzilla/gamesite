@@ -1,0 +1,34 @@
+{{> header}}
+<main id="main">
+    <section class="container-fluid main-small">
+        <div class="main-elem text-center">
+            <img src="images/banner2.jpg" class="img-fluid img-thumbnail p-0 border-0 rounded-0">
+            <div class="main-info d-flex flex-column justify-content-center align-self-center animated fadeInUpBig">
+                <h1>GAMES</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid p-0 animated fadeInUpBig">
+        <div class="main-wrapper mx-auto">
+            {{#games}}
+            <div class="row">
+                <div class="col-md-6 col-sm-12 main-box p-0">
+                    <img src="images/games/{{id}}/{{icon}}" class="img-fluid img-thumbnail p-0 border-0 rounded-0">
+                    <div class="main-info d-flex justify-content-center align-items-center">
+                        <p>{{desc}}</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 main-box p-0 bg-secondary text-center">
+                    <div class="main-info d-flex flex-column justify-content-center align-items-center">
+                        <img alt="Game Logo" class="main-info_logo" src="">
+                        <p>{{shortDesc}}</p>
+                        <a href="/games/{{alias}}" class="main-button_big main-button_anim d-block mx-auto rounded">VIEW MORE</a>
+                    </div>
+                </div>
+            </div>
+            {{/games}}
+        </div>
+    </section>
+</main>
+{{> footer}}

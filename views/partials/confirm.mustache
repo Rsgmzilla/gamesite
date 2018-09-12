@@ -1,0 +1,32 @@
+<div class="confirm position-absolute mx-auto pt-4 pb-4 bg-dark" id="confirm">
+    <div class="confirm-head text-white text-center pb-4 pl-4 pr-4"></div>
+    <div class="row ml-3 mr-3">
+        <div class="col-5 confirm-but text-center bg-success text-white pt-2 pb-2" onclick="confirmModal()">Confirm</div>
+        <div class="col-5 offset-2 confirm-but text-center bg-danger text-white pt-2 pb-2" onclick="hideModal();">Cancel</div>
+    </div>
+</div>
+
+<script>
+    let act = null;
+
+    function action(){
+        eval(act);
+    }
+
+    function showModal(messageHtml, action) {
+        $(".confirm-head").text(messageHtml);
+        act = action;
+        $("#confirm").css("display", "block");
+    }
+
+    function confirmModal(){
+        if(act){
+            action();
+        }
+        hideModal();
+    }
+
+    function hideModal() {
+        $("#confirm").css("display", "none");
+    }
+</script>

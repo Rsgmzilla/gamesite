@@ -1,0 +1,24 @@
+{{> header}}
+<main id="main">
+    <section class="container a_main-list">
+        <div class="row text-dark pb-3 pl-1">
+            <div class="col-2">Name</div>
+            <div class="col-2 offset-1">Alias</div>
+            <div class="col-4 offset-1">Short desc</div>
+            <div class="col-1 offset-1 d-flex justify-content-center align-items-center"></div>
+        </div>
+        {{#games}}
+        <div class="a_main-elem rounded text-white" onClick="window.location.href='/admin/update/{{alias}}';">
+            <div class="row">
+                <div class="col-2">{{name}}</div>
+                <div class="col-2 offset-1">{{alias}}</div>
+                <div class="col-4 offset-1">{{shortDesc}}</div>
+                <div class="col-1 offset-1 d-flex justify-content-center align-items-center" onClick="showModal('Confirm removing {{alias}}', 'window.location.href=\'/admin/delete/{{alias}}\';'); event.stopPropagation();">
+                    <img src="images/cross.png">
+                </div>
+            </div>
+        </div>
+        {{/games}}
+    </section>
+</main>
+{{> confirm}}

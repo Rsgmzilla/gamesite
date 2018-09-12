@@ -1,0 +1,73 @@
+{{> header}}
+<main id="main">
+    <section class="container">
+        <form class="a_main-form" method="POST" action="/admin/{{actionLink}}">
+            <input name="id" class="d-none" {{#game.id}}value="{{game.id}}"{{/game.id}}>
+            <div class="form-group text-left">
+                <label for="gameAlias">Alias</label>
+                <input type="text" name="alias" class="form-control a_form-input" id="gameAlias" placeholder="Alias" value="{{game.alias}}" {{#game.alias}}readonly{{/game.alias}} required>
+            </div>
+            <div class="form-group text-left">
+                <label for="gameName">Name</label>
+                <input type="text" name="name" class="form-control a_form-input" id="gameName" placeholder="Name" value="{{game.name}}">
+            </div>
+            <div class="form-group text-left">
+                <label for="gameShortDesc">Short description</label>
+                <input type="text" name="shortDesc" class="form-control a_form-input" id="gameShortDesc" placeholder="Short desc" value="{{game.shortDesc}}">
+            </div>
+            <div class="form-group text-left">
+                <label for="gameDesc">Description</label>
+                <textarea name="desc" class="form-control a_form-field" id="gameDesc" rows="4">{{game.desc}}</textarea>
+            </div>
+            <div class="form-group text-left">
+                <label for="gameYTLink">Youtube link</label>
+                <input type="text" name="youtubeLink" class="form-control a_form-input" id="gameYTLink" placeholder="Link" value="{{game.youtubeLink}}">
+            </div>
+            <div class="form-group text-left">
+                <label for="gamePlayLink">Market links</label>
+                <input type="text" name="playLink" class="form-control a_form-input mb-1" id="gamePlayLink" placeholder="Google Play link" value="{{game.playLink}}">
+                <input type="text" name="storeLink" class="form-control a_form-input" id="gameStoreLink" placeholder="App Store link" value="{{game.storeLink}}">
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" name="isActive" type="checkbox" id="gameIsActive" {{#game.isActive}}checked{{/game.isActive}}>
+                <label class="form-check-label" for="gameIsActive">
+                    Is active
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" name="isPublishing" type="checkbox" id="gameIsPublishing" {{#game.isPublishing}}checked{{/game.isPublishing}}>
+                <label class="form-check-label" for="gameIsPublishing">
+                    Is publishing
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="gameAddScreen">Add screens</label>
+                <input type="file" class="form-control-file" id="gameAddScreen">
+            </div>
+            <div class="a_main-screens mb-3">
+                <div class="a_main-box d-inline">
+                    <img src="images/square1.jpg">
+                </div>
+                <div class="a_main-box d-inline">
+                    <img src="images/square1.jpg">
+                </div>
+                <div class="a_main-box d-inline">
+                    <img src="images/square1.jpg">
+                </div>
+                <div class="a_main-box d-inline">
+                    <img src="images/square1.jpg">
+                </div>
+                <div class="a_main-box d-inline">
+                    <img src="images/square1.jpg">
+                </div>
+                <div class="a_main-box d-inline">
+                    <img src="images/square1.jpg">
+                </div>
+                <div class="a_main-box d-inline">
+                    <img src="images/square1.jpg">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mx-auto a_form-button mb-5">Save</button>
+        </form>
+    </section>
+</main>

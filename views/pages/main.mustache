@@ -1,0 +1,119 @@
+{{> header}}
+<main id="main">
+    <!-- TOP BANNER WITH GAMES -->
+    <div id="sliderTop" class="carousel slide">
+        <div class="carousel-inner">
+            {{#games}}
+            <div class="carousel-item">
+                <section class="container-fluid main-big">
+                    <div class="main-elem text-center">
+                        <img src="images/{{banner}}" class="img-fluid img-thumbnail p-0 border-0 rounded-0">
+                        <div class="main-info d-flex flex-column justify-content-center align-self-center animated fadeInUpBig">
+                            <h2>{{name}}</h2>
+                            <p class="mx-auto">{{shortDesc}}</p>
+                            <a href="/games/{{alias}}" class="main-button_big main-button_anim d-block mx-auto rounded">VIEW MORE</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            {{/games}}
+        </div>
+        <a class="carousel-control-prev" href="#sliderTop" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#sliderTop" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <section class="container-fluid p-0 animated fadeInUpBig">
+        <div class="main-wrapper mx-auto">
+            <div class="row m-0">
+                <!-- TECH INFO -->
+                <div class="col-md-6 col-sm-12 main-box p-0">
+                    <img src="images/square1.jpg" class="img-fluid img-thumbnail p-0 border-0 rounded-0">
+                    <div class="main-info d-flex justify-content-center align-items-center">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <!-- TECHNOLOGIES -->
+                <div class="col-md-6 col-sm-12 main-box p-0">
+                    <img src="images/square2.png" class="img-fluid img-thumbnail p-0 border-0 rounded-0">
+                    <a class="main-link d-block" href="/technologies">
+                        <div class="main-info d-flex flex-column justify-content-center align-items-center">
+                            <h2>TECHNOLOGIES</h2>
+                            <h6>AR/VR</h6>
+                            <h6>UNITY ENGINE</h6>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row m-0">
+                <!-- PUBLISHING -->
+                <div class="col main-box text-center m-0 p-0">
+                    <img src="images/banner.jpg" class="img-fluid img-thumbnail p-0 border-0 rounded-0">
+                    <div class="main-info d-flex flex-column justify-content-center align-items-center">
+                        <h2>PUBLISHING</h2>
+                        <p class="mx-auto">We’ve acquired over 60 million users this year. We release a new game every 2 months. We know how to publish games!</p>
+                        <a href="/publishing" class="main-button_big main-button_anim d-block mx-auto rounded">JOIN US</a>
+                    </div>
+                </div>
+            </div>
+            <!-- GAMES SLIDER -->
+            <div id="sliderBot" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    {{#games}}
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-6 d-sm-none d-md-block main-box p-0">
+                                <img src="images/games/{{id}}/{{icon}}" class="img-fluid img-thumbnail p-0 border-0 rounded-0">
+                                <div class="main-info d-flex justify-content-center align-items-center">
+                                    <p>{{desc}}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 main-box p-0">
+                                <img src="images/games/{{id}}/{{icon}}" class="img-fluid img-thumbnail p-0 border-0 rounded-0">
+                                <a class="main-link d-block" href="games/{{alias}}">
+                                    <div class="main-info d-flex flex-column justify-content-center align-items-center">
+                                        <h2>{{name}}</h2>
+                                        <h6>{{shortDesc}}</h6>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {{/games}}
+                </div>
+                <a class="carousel-control-prev" href="#sliderBot" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#sliderBot" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div class="row m-0">
+                <!-- INFO -->
+                <div class="col-md-6 col-sm-12 main-box p-0">
+                    <img src="images/square3.jpg" class="img-fluid img-thumbnail p-0 border-0 rounded-0">
+                    <div class="main-info d-flex justify-content-center align-items-center">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <!-- CONTACTS -->
+                <div class="col-md-6 col-sm-12 main-box p-0">
+                    <img src="images/square4.jpg" class="img-fluid img-thumbnail p-0 border-0 rounded-0">
+                    <a class="main-link d-block" href="/contacts">
+                        <div class="main-info d-flex flex-column justify-content-center align-items-center">
+                            <h1>CONTACT US</h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{{> footer}}

@@ -1,0 +1,85 @@
+{{> header}}
+<main id="main">
+    <section class="container-fluid main-small">
+        <div class="main-elem text-center">
+            <img src="images/banner2.jpg" class="img-fluid img-thumbnail p-0 border-0 rounded-0">
+            <div class="main-info d-flex flex-column justify-content-center align-self-center animated fadeInUpBig">
+                <h1>CONTACT US</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="container contact-top animated fadeInUpBig">
+        <div class="row">
+            <div class="col-md-4 col-sm-12 text-center">
+                <img class="mx-auto" src="images/round.png">
+                <div class="contact_address_head font-weight-bold">Moscow</div>
+
+                <div class="contact_address_text mx-auto">
+                    <div>Email</div>
+                    <div>keks_iz_rostova@imail.com</div>
+                </div>
+                <div class="contact_address_text mx-auto">
+                    <div>Phone</div>
+                    <div>+70000000000</div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 text-center">
+                <img class="mx-auto" src="images/round.png">
+                <div class="contact_address_head font-weight-bold">Moscow</div>
+
+                <div class="contact_address_text mx-auto">
+                    <div>Email</div>
+                    <div>keks_iz_rostova@imail.com</div>
+                </div>
+                <div class="contact_address_text mx-auto">
+                    <div>Phone</div>
+                    <div>+70000000000</div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 text-center">
+                <img class="mx-auto" src="images/round.png">
+                <div class="contact_address_head font-weight-bold">Moscow</div>
+
+                <div class="contact_address_text mx-auto">
+                    <div>Email</div>
+                    <div>keks_iz_rostova@imail.com</div>
+                </div>
+                <div class="contact_address_text mx-auto">
+                    <div>Phone</div>
+                    <div>+70000000000</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid p-0">
+        <div class="main-wrapper mx-auto">
+            <div class="contact-message">
+                <div class="row">
+                    <div class="col-6 offset-3 text-center">
+                        <h1>Contact Us</h1>
+                        <form method="POST" action="/contacts">
+                            <div class="form-group text-left">
+                                <label for="contactName">Name</label>
+                                <input name="name" type="name" class="form-control contact-message_field" id="contactName" placeholder="Name" min="3" max="20" required>
+                            </div>
+                            <div class="form-group text-left">
+                                <label for="contactMail">Email address</label>
+                                <input name="email" type="email" class="form-control contact-message_field" id="contactMail" aria-describedby="contactMail" placeholder="Enter email" min="5" max="40" required>
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group text-left">
+                                <label for="contactQuest">Your message</label>
+                                <textarea name="message" class="form-control contact-message_field" id="contactQuest" rows="8" minlength="5" maxlength="400" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary mx-auto contact-message_but">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{{> footer}}
+{{> toast}}

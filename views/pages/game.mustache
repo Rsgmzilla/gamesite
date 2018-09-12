@@ -1,0 +1,56 @@
+{{> header}}
+<main id="main">
+    <section class="container-fluid main-small">
+        <div class="main-elem text-center">
+            <img src="images/games/{{game.id}}/{{game.banner}}" class="img-fluid img-thumbnail p-0 border-0 rounded-0">
+            <div class="main-info d-flex flex-column justify-content-center align-self-center animated fadeInUpBig">
+                <h1>{{game.name}}</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="container game-info animated fadeInUpBig">
+        <div class="row">
+            <div class="col-lg-3 col-md-12 text-center d-flex game-info_left justify-content-center align-items-center">
+                <img src="images/round.png">
+            </div>
+            <div class="col-lg-8 offset-lg-1 col-md-12 game-info_right text-left d-flex flex-column justify-content-start">
+                <h2 class="text-primary">HEADING</h2>
+                <p class="text-secondary">{{game.shortDesc}}</p>
+                <div class="game-info_links d-flex flex-row justify-content-start">
+                    <a href="{{game.storeLink}}" target="_blank" class="game-info_button game-button_ios d-block text-center rounded"></a>
+                    <a href="{{game.playLink}}" target="_blank" class="game-info_button game-button_android d-block text-center rounded"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid animated fadeInUpBig">
+        <div class="game-video mx-auto">
+            <iframe width="100%" src="{{game.youtubeLink}}"></iframe>
+        </div>
+    </section>
+
+    <section class="container game-desc">
+        <div class="row">
+            <div class="col text-center">
+                <h5>{{game.desc}}</h5>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid p-0">
+        <div class="row">
+            <div class="col">
+                <div class="game-list">
+                    <img src="images/square1.jpg" class="game-list_image img-fluid img-thumbnail p-0 border-0 rounded-0">
+                    <img src="images/square1.jpg" class="game-list_image img-fluid img-thumbnail p-0 border-0 rounded-0">
+                    <img src="images/square1.jpg" class="game-list_image img-fluid img-thumbnail p-0 border-0 rounded-0">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+{{> footer}}
