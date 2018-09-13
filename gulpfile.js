@@ -1,5 +1,6 @@
 const gulp = require("gulp"),
       debug = require('gulp-debug'),
+      babel = require('gulp-babel'),
       gutil = require('gulp-util'),
       uglify = require('gulp-uglify'),
       sourceMaps = require('gulp-sourcemaps'),
@@ -20,6 +21,7 @@ gulp.task('styles', () => {
 gulp.task('scripts', () => {
     gulp.src('assets/scripts/*.js')
         .pipe(debug({title: "src"}))
+        .pipe(babel({presets: ['es2015']}))
         .pipe(sourceMaps.init())
         .pipe(uglify())
         .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })

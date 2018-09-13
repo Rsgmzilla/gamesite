@@ -16,6 +16,8 @@
   "dependencies": {
     "app-root-path": "^2.1.0",
     "async": "^2.6.1",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
     "chai": "^4.1.2",
     "client-sessions": "^0.8.0",
     "fs": "0.0.1-security",
@@ -40,5 +42,10 @@
     "url": "^0.11.0",
     "url-pattern": "^1.0.3",
     "validate": "^4.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.1",
+    "@babel/preset-env": "^7.0.0",
+    "gulp-babel": "^8.0.0"
   }
 }
