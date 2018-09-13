@@ -6,7 +6,6 @@ const gulp = require("gulp"),
       minifyCSS = require('gulp-cssnano'),
       jsHint = require('gulp-jshint');
 
-
 gulp.task('styles', () => {
     gulp.src('assets/styles/*.css')
         .pipe(debug({title: "src"}))

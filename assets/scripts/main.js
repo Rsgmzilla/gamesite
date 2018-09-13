@@ -5,7 +5,7 @@ $(window).load(function () {
 });
 
 function runHamburger(){
-    $("#header_icon").click( () => {
+    $("#header_icon").click(function() {
         $(this).toggleClass("open");
 
         $(".header-menu_list").toggleClass("header-menu_toggle");
@@ -17,7 +17,7 @@ function showToast() {
     if($(".toast")){
         $(".toast").addClass("toast-show");
 
-        setTimeout(function() { $(".toast").removeClass("toast-show"); }, 3000);
+        setTimeout(() => { $(".toast").removeClass("toast-show"); }, 3000);
     }
 }
 
